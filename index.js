@@ -38,13 +38,13 @@ boxes.forEach((box) => {
 });
 
 const disableBoxes = () => {
-    for(let box in boxes) {
+    for(let box of boxes) {
         box.disabled = true;
     }
 }
 
 const enableBoxes = () => {
-    for(let box in boxes) {
+    for(let box of boxes) {
         box.disabled = false;
         box.innerText = "";
     }
@@ -71,5 +71,5 @@ const checkWin = () => {
     }
 };
 
-newGameBttn.addEventListener("Click", resetGame);
-resetBtn.addEventListener("Click", resetGame);
+newGameBttn.addEventListener("click", resetGame);
+resetBtn.addEventListener("click", resetGame);
